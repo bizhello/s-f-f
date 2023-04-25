@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  frontend:
+    build: ./front
+    volumes:
+      - /app/node_modules
+      - ./front:/app
+    restart: always
+    ports:
+      - 3333:3000
+    # env_file:
+    #   - ./front/.env
+  backend:
+    build: ./back
+    volumes:
+      - /app/node_modules
+      - ./back:/app
+    restart: always
+    ports:
+      - 5555:5000
+    depends_on:
+      - mongo
+    env_file:
+      - ./back/.env
+  mongo:
+    image: mongo
+    volumes:
+      - mongodata:/data/db
+    restart: unless-stopped
+    ports:
+      - 27017:27017
+    container_name: mongodb
+    environment:
+      DATABASE_USER: test
+      DATABASE_PASSWORD: test
+
+volumes:
+  mongodata:

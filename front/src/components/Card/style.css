@@ -1,0 +1,74 @@
+.card {
+  margin: 2em 0 0;
+  padding: 1em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid rgba(179, 173, 173, 0.14);;
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+.card-isError {
+  background-color: rgb(224, 104, 104);
+}
+.card__group {
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card__image {
+  width:104px;
+  height:142px;
+  image-rendering: pixelated;
+  object-fit:cover;
+  object-position: center;
+}
+
+.card__control {
+  border: none;
+  width: 34px;
+  height: 34px;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.card__control-plus {
+background: url('../../assets/images/plus.svg') no-repeat center;
+}
+
+.card__control-minus {
+background: url('../../assets/images/minus.svg') no-repeat center;
+}
+
+.card__control-change {
+background: url('../../assets/images/change.svg') no-repeat center;
+}
+
+.card__control-delete {
+ background: url('../../assets/images/remove.svg') no-repeat center; 
+}
+
+.card__description {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.card__control:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.card-enter {
+  opacity: 0;
+}
+.card-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.card-exit {
+  opacity: 1;
+}
+.card-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}

@@ -1,0 +1,79 @@
+.selectWithButton {
+    margin: 2em 2em 4em;
+    display: flex;
+    justify-content: space-between;
+}
+.selectWithButton__group {
+    display: flex;
+    height: 5em;
+}
+.selectWithButton__select {
+    color: rgb(118, 118, 118);
+    font-size: 1em;
+    background-color: #e8e8e8;
+    border: none;
+    outline:none;
+    border-bottom: 2px solid #878787;
+    transition: border-bottom 0.5s ease-in-out;
+}
+.selectWithButton__select:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+.selectWithButton__select:focus{
+    color: rgba(63, 81, 181, 1);
+    
+    border-bottom: 3px solid rgba(63, 81, 181, 1);
+}
+
+.selectWithButton__select:focus + .search__label{
+    
+    color: rgba(63, 81, 181, 1);
+}
+.selectWithButton__group-left {
+    padding: 1em 1em;
+    justify-content:space-between;
+    flex-direction: column-reverse;
+    background-color: #e8e8e8;
+    border-radius: 5px;
+}
+.selectWithButton__group-right {
+    justify-content: center;
+    align-items: center;
+}
+
+.selectInput__text {
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1.334;
+    margin-right: 1em;
+}
+.selectWithButton__button {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    background-color: red;
+    border: none;
+    border-radius: 50%;
+    transition: opacity 0.15s ease-in-out;
+}
+.selectWithButton__button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+.selectWithButton__button::after {
+    position: absolute;
+    right: 17px;
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: white;
+}
+.selectWithButton__button::before {
+    position: absolute;
+    bottom: 17px;
+    content: '';
+    width: 2px;
+    height: 20px;
+    background: white;
+}
